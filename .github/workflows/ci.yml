@@ -19,6 +19,8 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      # Rails 7系を意図的に維持する方針のため、EOLRails(サポート終了)警告は
+      # config/brakeman.ignore で無視している(理由はignoreファイル内のnoteを参照)
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
 
