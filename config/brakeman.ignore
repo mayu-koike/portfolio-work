@@ -1,0 +1,22 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Unmaintained Dependency",
+      "warning_code": 120,
+      "fingerprint": "d84924377155b41e094acae7404ec2e521629d86f97b0ff628e3d1b263f8101c",
+      "check_name": "EOLRails",
+      "message": "Support for Rails 7.2.3.2 ended on 2026-08-09",
+      "file": "Gemfile.lock",
+      "line": 194,
+      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
+      "code": null,
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "High",
+      "note": "Rails 7系を意図的に維持する方針のため無視。7.2系の最新パッチ(7.2.3.2)を使用しており、8系への移行時に見直す。"
+    }
+  ],
+  "updated": "2026-09-23 09:00:30 +0000",
+  "brakeman_version": "8.0.6"
+}
