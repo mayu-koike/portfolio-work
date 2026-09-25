@@ -1,0 +1,11 @@
+<header class="bg-white border-b border-stone-200 px-6 py-4 flex justify-between items-center">
+   <span class="font-serif text-lg font-semibold text-rose-800">クリニック手帳</span>
+      <% if user_signed_in? %>
+         <%= link_to "ログアウト", destroy_user_session_path,
+            data: { turbo_method: :delete },
+            class: "text-sm text-rose-800 hover:underline" %>
+      <% else %>
+         <%= link_to "ログイン", new_user_session_path,
+         class: "text-sm text-rose-800 hover:underline" %>
+      <% end %>
+</header>
