@@ -40,8 +40,12 @@ RSpec.configure do |config|
     Rails.root.join('spec/fixtures')
   ]
 
+  config.include Devise::Test::IntegrationHelpers, type: :request
   # System specs use headless Chrome via Selenium, matching the previous
   # Minitest ApplicationSystemTestCase configuration.
+
+  config.include FactoryBot::Syntax::Methods
+
   config.before(:each, type: :system) do
     driven_by :selenium, using: :headless_chrome, screen_size: [ 1400, 1400 ]
   end

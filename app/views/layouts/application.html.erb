@@ -19,7 +19,24 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <%= render "shared/header" %>
+      <% if notice %>
+        <div class="w-full bg-emerald-50 border-b border-emerald-200">
+          <p class="max-w-lg left px-4 py-3 text-sm text-emerald-800">
+            <%= notice %>
+          </p>
+        </div>
+      <% end %>
+
+      <% if alert %>
+        <div class="w-full bg-rose-50 border-b border-rose-200">
+          <p class="max-w-lg left px-4 py-3 text-sm text-rose-800">
+            <%= alert %>
+          </p>
+        </div>
+      <% end %>
+
+      <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
   </body>

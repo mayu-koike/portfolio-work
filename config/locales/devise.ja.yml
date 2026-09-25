@@ -1,0 +1,15 @@
+ja:
+  devise:
+    confirmations:
+      confirmed: "メールアドレスの確認が完了しました。"
+    failure:
+      invalid: "%{authentication_keys}またはパスワードが違います。"
+      not_found_in_database: "%{authentication_keys}またはパスワードが違います。"
+      timeout: "セッションがタイムアウトしました。もう一度ログインしてください。"
+      unauthenticated: "アカウント登録もしくはログインしてください。"
+    registrations:
+      signed_up: "アカウント登録が完了しました。"
+    sessions:
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+      already_signed_out: "すでにログアウト済みです。"
