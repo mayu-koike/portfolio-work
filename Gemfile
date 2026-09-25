@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.3", ">= 7.2.3.2"
+gem "rails", "~> 8.1.3"
 # Pin below 3.0: json 3.0 dropped the `quirks_mode:` keyword that
 # ActiveSupport::JSON.stringify still passes on Rails 7.2, causing
 # "ArgumentError: unknown keyword: quirks_mode" (e.g. on Devise sign up).
