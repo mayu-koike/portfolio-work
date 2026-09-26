@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    attributes:
+      counseling_record:
+        treatment_area: "施術部位"
+        status: "検討状況"
+    enums:
+      counseling_record:
+        treatment_area:
+          eye: "目"
+          nose: "鼻"
+          contour: "輪郭"
+          lip: "唇"
+          skin: "肌"
+          other: "その他"
+        status:
+          considering: "検討中"
+          booked: "予約済"
+          decided: "決定"
+          dropped: "見送り"
