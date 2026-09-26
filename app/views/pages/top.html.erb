@@ -1,0 +1,48 @@
+<!-- ヒーローセクション(淡いピンクの背景で柔らかく) -->
+<section class="bg-rose-50">
+  <div class="max-w-2xl mx-auto text-center px-6 pt-20 pb-24">
+    <h1 class="font-serif text-3xl md:text-4xl font-semibold text-stone-800 leading-relaxed mb-6">
+      カウンセリングの記録を、<br>
+      あとで見比べられる形に。
+    </h1>
+    <p class="text-stone-500 text-sm md:text-base leading-loose mb-10">
+      見積もりだけじゃなく、リスクの説明や納得感も。<br class="hidden md:block">
+      複数院を回るあなたのための、比較ノートです。
+    </p>
+    <%= link_to "無料ではじめる", new_user_registration_path,
+          class: "inline-block text-sm text-white bg-rose-800 rounded-full px-8 py-3 hover:bg-rose-900 shadow-sm" %>
+  </div>
+</section>
+
+<!-- 特徴セクション(枠線なし、色の塊で区切る) -->
+<section class="max-w-4xl mx-auto px-6 py-16">
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="rounded-2xl bg-rose-50 p-6">
+      <p class="text-2xl mb-3">📝</p>
+      <h3 class="font-serif text-base font-semibold mb-2">その場で記録</h3>
+      <p class="text-sm text-stone-500 leading-relaxed">悩みや提案内容を、忘れないうちにサッと残せます。</p>
+    </div>
+
+    <div class="rounded-2xl bg-amber-50 p-6">
+      <p class="text-2xl mb-3">⚖️</p>
+      <h3 class="font-serif text-base font-semibold mb-2">横並びで比較</h3>
+      <p class="text-sm text-stone-500 leading-relaxed">価格・リスク説明・納得感を、一覧でまとめて見返せます。</p>
+    </div>
+
+    <div class="rounded-2xl bg-stone-100 p-6">
+      <p class="text-2xl mb-3">💬</p>
+      <h3 class="font-serif text-base font-semibold mb-2">決める前に整理</h3>
+      <p class="text-sm text-stone-500 leading-relaxed">口コミサイトとは違う、自分だけの検討ノートです。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA(再掲、シンプルに) -->
+<section class="text-center px-6 pb-20">
+  <%= link_to "無料で新規登録する", new_user_registration_path,
+        class: "inline-block text-sm text-white bg-rose-800 rounded-full px-8 py-3 hover:bg-rose-900 shadow-sm" %>
+</section>
+
+

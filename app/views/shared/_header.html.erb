@@ -1,11 +1,15 @@
 <header class="bg-white border-b border-stone-200 px-6 py-4 flex justify-between items-center">
-   <span class="font-serif text-lg font-semibold text-rose-800">クリニック手帳</span>
+   <%= link_to "クリニック手帳", root_path, class: "font-serif text-lg font-semibold text-rose-800" %>
+      <div class="flex items-center gap-3">
       <% if user_signed_in? %>
          <%= link_to "ログアウト", destroy_user_session_path,
             data: { turbo_method: :delete },
             class: "text-sm text-rose-800 hover:underline" %>
       <% else %>
          <%= link_to "ログイン", new_user_session_path,
-         class: "text-sm text-rose-800 hover:underline" %>
+         class: "text-sm text-stone-600 border border-stone-300 rounded-full px-4 py-2 hover:bg-stone-50" %>
+         <%= link_to "新規登録", new_user_registration_path,
+         class: "text-sm text-white bg-rose-800 rounded-full px-5 py-2 hover:bg-rose-900" %>
       <% end %>
+      </div>
 </header>

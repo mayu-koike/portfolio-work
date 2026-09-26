@@ -36,8 +36,9 @@
         </div>
       <% end %>
 
-      <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+      <main class="container mx-auto mt-28 px-5">
+        <%= yield %>
+      </main>
+      <%= render "shared/footer" %>
   </body>
 </html>
