@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  root "pages#top"
   get "/home", to: "top#home"
-  root "top#home"
+  get "/terms", to: "pages#terms"
+  get "/privacy", to: "pages#privacy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
