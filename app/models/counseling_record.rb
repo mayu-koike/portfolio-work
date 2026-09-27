@@ -8,6 +8,8 @@ class CounselingRecord < ApplicationRecord
 
   validates :treatment_area, presence: true
   validates :counseling_date, presence: true
+  validates :clinic, presence: true
+  validates :treatment, presence: true
   validates :risk_disclosure_honesty, inclusion: { in: 1..5 }, allow_nil: true
   validates :proposal_satisfaction, inclusion: { in: 1..5 }, allow_nil: true
   validates :estimated_cost, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true
