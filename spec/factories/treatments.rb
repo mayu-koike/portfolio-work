@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :treatment do
-    name { "MyString" }
+    name { "二重整形" }
   end
 end

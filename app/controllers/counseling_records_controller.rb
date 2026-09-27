@@ -49,7 +49,7 @@ class CounselingRecordsController < ApplicationController
     @counseling_record.clinic = clinic
 
     if @counseling_record.update(counseling_record_params)
-      redirect_to counseling_records_path, notice: "カウンセリング記録の更新に成功しました"
+      redirect_to @counseling_record, notice: "カウンセリング記録の更新に成功しました"
     else
       flash.now[:alert] = "カウンセリング記録の更新に失敗しました"
       render :edit, status: :unprocessable_entity
