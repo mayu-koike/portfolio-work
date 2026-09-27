@@ -57,6 +57,8 @@ class CounselingRecordsController < ApplicationController
   end
 
   def destroy
+    @counseling_record.destroy
+    redirect_to counseling_records_path, notice: "カウンセリング記録の削除に成功しました"
   end
 
   private
