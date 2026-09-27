@@ -65,15 +65,8 @@
             <td class="px-3 py-4 whitespace-nowrap"><%= record.risk_disclosure_honesty.presence || "-" %> / 5</td>
             <td class="px-3 py-4 whitespace-nowrap"><%= record.proposal_satisfaction.presence || "-" %> / 5</td>
             <td class="px-3 py-4 whitespace-nowrap">
-              <span class="text-xs font-semibold rounded-full px-3 py-1
-                <%= case record.status
-                    when "decided" then "bg-rose-800 text-white"
-                    when "considering" then "bg-amber-50 text-amber-700"
-                    when "booked" then "bg-sky-50 text-sky-700"
-                    else "bg-stone-100 text-stone-500"
-                    end %>">
-                <%= I18n.t("activerecord.enums.counseling_record.status.#{record.status}") %>
-              </span>
+              <span class="text-xs font-semibold rounded-full px-3 py-1 <%= status_badge_class(record.status) %>">
+              <%= I18n.t("activerecord.enums.counseling_record.status.#{record.status}") %></span>
             </td>
             <td class="px-3 py-4 text-right whitespace-nowrap">
               <%= link_to "詳細", counseling_record_path(record), class: "text-xs text-stone-500 border border-stone-300 rounded px-3 py-1.5 hover:bg-stone-50" %>

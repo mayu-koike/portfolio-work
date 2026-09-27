@@ -12,14 +12,14 @@ class CounselingRecordsController < ApplicationController
   end
 
   def create
-    if params[:clinic_name].blank?
+    clinic = Clinic.find_or_create_by_name(current_user, params[:clinic_name])
+
+    unless clinic
       @counseling_record = current_user.counseling_records.build(counseling_record_params)
       flash.now[:alert] = "クリニック名を入力してください。"
       render :new, status: :unprocessable_entity
       return
     end
-
-    clinic = current_user.clinics.find_or_create_by(name: params[:clinic_name])
 
     @counseling_record = current_user.counseling_records.build(counseling_record_params)
     @counseling_record.clinic = clinic
@@ -39,13 +39,14 @@ class CounselingRecordsController < ApplicationController
   end
 
   def update
-    if params[:clinic_name].blank?
+    clinic = Clinic.find_or_create_by_name(current_user, params[:clinic_name])
+
+    unless clinic
       flash.now[:alert] = "クリニック名を入力してください。"
       render :edit, status: :unprocessable_entity
       return
     end
 
-    clinic = current_user.clinics.find_or_create_by(name: params[:clinic_name])
     @counseling_record.clinic = clinic
 
     if @counseling_record.update(counseling_record_params)
