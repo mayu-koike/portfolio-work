@@ -19,15 +19,8 @@
               data: { turbo_confirm: "この検討記録を削除しますか?" },
               class: "text-sm text-rose-800 border border-rose-200 rounded px-4 py-2 hover:bg-rose-50" %>
       </div>
-      <span class="text-xs font-semibold rounded-full px-3 py-1
-        <%= case @counseling_record.status
-          when "decided" then "bg-rose-800 text-white"
-          when "considering" then "bg-amber-50 text-amber-700"
-          when "booked" then "bg-sky-50 text-sky-700"
-          else "bg-stone-100 text-stone-500"
-          end %>">
-        <%= I18n.t("activerecord.enums.counseling_record.status.#{@counseling_record.status}") %>
-      </span>
+      <span class="text-xs font-semibold rounded-full px-3 py-1 <%= status_badge_class(@counseling_record.status) %>">
+      <%= I18n.t("activerecord.enums.counseling_record.status.#{@counseling_record.status}") %></span>
       <p class="text-xs text-stone-500 text-right leading-relaxed">
         カウンセリング日 <%= @counseling_record.counseling_date&.strftime("%Y/%m/%d") %><br>
         登録日 <%= @counseling_record.created_at.strftime("%Y/%m/%d") %>
