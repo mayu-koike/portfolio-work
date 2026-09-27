@@ -57,6 +57,8 @@ group :development, :test do
 
   # Fixtures replacement with a straightforward definition syntax [https://github.com/thoughtbot/factory_bot_rails]
   gem "factory_bot_rails"
+
+  gem "simplecov", require: false
 end
 
 group :development do
