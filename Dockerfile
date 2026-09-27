@@ -23,4 +23,4 @@ RUN SECRET_KEY_BASE_DUMMY=1 bin/rails assets:precompile
 
 EXPOSE 3000
 
-CMD bundle exec rails db:create db:migrate && bundle exec rails server -b 0.0.0.0
+CMD bundle exec rails db:create db:migrate db:seed && bundle exec rails server -b 0.0.0.0
