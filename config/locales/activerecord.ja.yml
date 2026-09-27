@@ -1,11 +1,24 @@
 ja:
   activerecord:
+    models:
+      user: "ユーザー"
     attributes:
+      user:
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
       clinic:
         name: "クリニック名"
       counseling_record:
         treatment_area: "施術部位"
         status: "検討状況"
+        counseling_date: "カウンセリング日"
+        clinic: "クリニック"
+        treatment: "施術"
+        risk_disclosure_honesty: "リスク説明の誠実さ"
+        proposal_satisfaction: "提案内容の納得感"
+        estimated_cost: "見積金額"
+        downtime: "ダウンタイム"
     enums:
       counseling_record:
         treatment_area:
@@ -25,3 +38,15 @@ ja:
         blank: "を入力してください"
         invalid: "は不正な値です"
         taken: "はすでに使用されています"
+        confirmation: "が一致しません"
+        required: "を入力してください"
+        inclusion: "は一覧にありません"
+        greater_than_or_equal_to: "は%{count}以上の値にしてください"
+        not_a_number: "は数値で入力してください"
+        too_short: "は%{count}文字以上で入力してください"
+  errors:
+    format: "%{attribute}%{message}"
+    messages:
+      not_saved:
+        one: "1件のエラーが原因で、%{resource}は保存されませんでした:"
+        other: "%{count}件のエラーが原因で、%{resource}は保存されませんでした:"
