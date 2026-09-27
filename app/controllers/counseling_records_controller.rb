@@ -1,6 +1,8 @@
 class CounselingRecordsController < ApplicationController
   before_action :authenticate_user!
   def index
+    @counseling_records = current_user.counseling_records.includes(:clinic, :treatment).order(counseling_date: :desc)
+    @counseling_records = @counseling_records.where(status: params[:status]) if params[:status].present?
   end
 
   def new
