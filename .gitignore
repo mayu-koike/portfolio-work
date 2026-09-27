@@ -39,3 +39,5 @@
 
 # Ignore Ruby LSP cache
 /.ruby-lsp/
+
+/coverage/
