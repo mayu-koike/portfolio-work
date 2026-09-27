@@ -1,0 +1,2 @@
+module CounselingRecordsHelper
+end

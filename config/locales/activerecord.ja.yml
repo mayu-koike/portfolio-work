@@ -1,6 +1,8 @@
 ja:
   activerecord:
     attributes:
+      clinic:
+        name: "クリニック名"
       counseling_record:
         treatment_area: "施術部位"
         status: "検討状況"
@@ -18,3 +20,8 @@ ja:
           booked: "予約済"
           decided: "決定"
           dropped: "見送り"
+    errors:
+      messages:
+        blank: "を入力してください"
+        invalid: "は不正な値です"
+        taken: "はすでに使用されています"

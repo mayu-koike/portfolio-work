@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :counseling_records
   devise_for :users
 
   root "pages#top"
