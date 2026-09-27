@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root "pages#top"
-  get "/home", to: "top#home"
+  get "/home", to: redirect("/counseling_records")
   get "/terms", to: "pages#terms"
   get "/privacy", to: "pages#privacy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
