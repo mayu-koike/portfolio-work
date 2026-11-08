@@ -166,7 +166,7 @@ MVPでは、クリニック名・施術名をマスタとして切り出すた�
   - 部位（`treatment_area`）は記録ごとに選ぶ。施術マスタとは紐付けていない（ヒアルロン酸注入のように複数の部位で使う施術があるため）
 
 **画面遷移図**
-Figma: [画面遷移図](https://www.figma.com/design/ijSnf2O65G85FPEhUpE2ey/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=4001-229&t=qJfzApaDARGK15Us-1)
+Figma: [画面遷移図](https://www.figma.com/design/W8qvAxOEivkPpS7fwC0xKr/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?m=auto&t=itM3OlLGDdeOpKjR-6)
 
 ---
 
