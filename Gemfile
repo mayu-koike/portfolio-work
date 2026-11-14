@@ -5,7 +5,7 @@ gem "rails", "~> 7.2.3", ">= 7.2.3.2"
 # Pin below 3.0: json 3.0 dropped the `quirks_mode:` keyword that
 # ActiveSupport::JSON.stringify still passes on Rails 7.2, causing
 # "ArgumentError: unknown keyword: quirks_mode" (e.g. on Devise sign up).
-gem "json", "< 3"
+gem "json", "< 4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use postgresql as the database for Active Record
