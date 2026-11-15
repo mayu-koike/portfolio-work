@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2026_09_26_105248) do
+ActiveRecord::Schema[7.2].define(version: 2026_11_15_143736) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,7 +31,6 @@ ActiveRecord::Schema[7.2].define(version: 2026_09_26_105248) do
     t.text "proposal_reason"
     t.integer "estimated_cost"
     t.integer "downtime"
-    t.string "effect_duration"
     t.boolean "revision_guarantee", default: false
     t.integer "risk_disclosure_honesty"
     t.integer "proposal_satisfaction"
@@ -41,6 +40,7 @@ ActiveRecord::Schema[7.2].define(version: 2026_09_26_105248) do
     t.bigint "treatment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "effect_duration_months"
     t.index ["clinic_id"], name: "index_counseling_records_on_clinic_id"
     t.index ["treatment_id"], name: "index_counseling_records_on_treatment_id"
     t.index ["user_id"], name: "index_counseling_records_on_user_id"
