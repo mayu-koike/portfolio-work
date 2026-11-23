@@ -18,7 +18,8 @@ ja:
         risk_disclosure_honesty: "リスク説明の誠実さ"
         proposal_satisfaction: "提案内容の納得感"
         estimated_cost: "見積金額"
-        downtime: "ダウンタイム"
+        downtime: "ダウンタイム（日数）"
+        effect_duration_months: "効果の持続期間"
     enums:
       counseling_record:
         treatment_area:
