@@ -29,5 +29,33 @@ RSpec.describe Clinic, type: :model do
       subject.name = nil
       expect(subject).not_to be_valid
     end
+
+    describe "url" do
+      it "未入力の場合、有効である" do
+        [ nil, "" ].each do |url|
+          subject.url = url
+          expect(subject).to be_valid
+        end
+      end
+
+      it "http または https の場合、有効である" do
+        [ "http://example.com", "https://example.com/menu?id=1" ].each do |url|
+          subject.url = url
+          expect(subject).to be_valid
+        end
+      end
+
+      it "http と https 以外の場合、無効である" do
+        [ "javascript:alert(1)", "data:text/html,test", "ftp://example.com", "example.com" ].each do |url|
+          subject.url = url
+          expect(subject).not_to be_valid
+        end
+      end
+
+      it "改行を含む場合、無効である" do
+        subject.url = "javascript:alert(1)\nhttps://example.com"
+        expect(subject).not_to be_valid
+      end
+    end
   end
 end
