@@ -132,5 +132,24 @@ RSpec.describe CounselingRecord, type: :model do
         expect(subject).not_to be_valid
       end
     end
+
+    describe "effect_duration_months" do
+      it "未入力の場合、有効である" do
+        subject.effect_duration_months = nil
+        expect(subject).to be_valid
+      end
+
+      it "選択肢にある値の場合、有効である" do
+        CounselingRecord::EFFECT_DURATION_OPTIONS.each_value do |months|
+          subject.effect_duration_months = months
+          expect(subject).to be_valid
+        end
+      end
+
+      it "選択肢にない値の場合、無効である" do
+        subject.effect_duration_months = 7
+        expect(subject).not_to be_valid
+      end
+    end
   end
 end
