@@ -11,5 +11,17 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe CounselingRecordsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "#effect_duration_label" do
+    it "未入力の場合、- を返す" do
+      expect(helper.effect_duration_label(nil)).to eq("-")
+    end
+
+    it "選択肢にある月数の場合、その文言を返す" do
+      expect(helper.effect_duration_label(12)).to eq("1年")
+    end
+
+    it "120か月の場合、10年以上を返す" do
+      expect(helper.effect_duration_label(120)).to eq("10年以上")
+    end
+  end
 end

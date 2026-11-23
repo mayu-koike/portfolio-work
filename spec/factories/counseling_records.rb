@@ -10,7 +10,7 @@ FactoryBot.define do
     proposal_reason { "ダウンタイムが短いため" }
     estimated_cost { 350_000 }
     downtime { 3 }
-    effect_duration { "半永久" }
+    effect_duration_months { 120 }
     revision_guarantee { true }
     risk_disclosure_honesty { 4 }
     proposal_satisfaction { 4 }

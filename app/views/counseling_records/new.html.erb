@@ -78,8 +78,9 @@
         </div>
 
         <div class="flex flex-col gap-1">
-          <%= f.label :effect_duration, "効果持続期間", class: "text-xs text-stone-500" %>
-          <%= f.text_field :effect_duration, placeholder: "例:半永久 / 1〜2年",
+          <%= f.label :effect_duration_months, "効果の持続期間", class: "text-xs text-stone-500" %>
+          <%= f.select :effect_duration_months, CounselingRecord::EFFECT_DURATION_OPTIONS,
+                { include_blank: "選択してください" },
                 class: "w-full border border-stone-300 rounded px-3 py-2 text-sm" %>
         </div>
 

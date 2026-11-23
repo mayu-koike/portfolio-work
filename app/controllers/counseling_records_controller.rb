@@ -71,7 +71,7 @@ class CounselingRecordsController < ApplicationController
   def counseling_record_params
     params.require(:counseling_record).permit(:treatment_area, :doctor, :counseling_date, :status,
     :concerns, :proposal_reason, :estimated_cost, :downtime,
-    :effect_duration, :revision_guarantee, :risk_disclosure_honesty,
+    :effect_duration_months, :revision_guarantee, :risk_disclosure_honesty,
     :proposal_satisfaction, :notes, :treatment_id)
   end
 end

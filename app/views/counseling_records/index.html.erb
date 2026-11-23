@@ -34,7 +34,7 @@
           <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">提案施術</th>
           <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">見積金額</th>
           <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">ダウンタイム</th>
-          <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">効果持続期間</th>
+          <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">効果の持続期間</th>
           <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">修正保証</th>
           <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">リスク説明</th>
           <th class="text-left text-xs font-semibold text-rose-800 tracking-wide px-3 py-3 whitespace-nowrap">納得感</th>
@@ -54,7 +54,7 @@
               <% if record.estimated_cost.present? %>¥<%= number_with_delimiter(record.estimated_cost) %><% end %>
             </td>
             <td class="px-3 py-4 whitespace-nowrap"><%= record.downtime.present? ? "#{record.downtime}日" : "-" %></td>
-            <td class="px-3 py-4 whitespace-nowrap"><%= record.effect_duration.presence || "-" %></td>
+            <td class="px-3 py-4 whitespace-nowrap"><%= effect_duration_label(record.effect_duration_months) %></td>
             <td class="px-3 py-4 whitespace-nowrap">
               <% if record.revision_guarantee %>
                 <span class="text-xs bg-rose-50 text-rose-800 rounded px-2.5 py-1">あり</span>
