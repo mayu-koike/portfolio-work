@@ -9,6 +9,7 @@ ja:
         password_confirmation: "パスワード確認"
       clinic:
         name: "クリニック名"
+        url: "クリニックのURL"
       counseling_record:
         treatment_area: "施術部位"
         status: "検討状況"
